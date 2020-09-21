@@ -1,523 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
-  <!-- jQuery library -->
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
-
-  <style >
-
-    .mobile-container {
-      max-width: 480px;
-      margin: auto;
-      background-color: #555;
-      height: 500px;
-      color: white;
-      border-radius: 10px;
-    }
-
-    .topnav {
-      overflow: hidden;45*
-      background-color: #333;
-      position: relative;
-    }
-
-    .topnav #myLinks {
-      display: none;
-    }
-
-    .topnav a {
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-
-    .topnav a.icon {
-      background: black;
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .active {
-      background-color: #4CAF50;
-      color: white;
-    }
-    .div1{
-      position: absolute;
-
-    }
-    .div2{
-      position: sticky;
-
-    }
-
-
-    
-
-
-    .glow {
-      font-size: 80px;  
-      text-align: center;
-      -webkit-animation: glow 1s ease-in-out infinite alternate;
-      -moz-animation: glow 1s ease-in-out infinite alternate;
-      animation: glow 1s ease-in-out infinite alternate;
-      
-    }
-
-    @-webkit-keyframes glow {
-      from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-      }
-      
-      to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-
-    }
-
-    .animate{
-      animation: type 2s steps(80);
-      overflow:hidden;
-      white-space: nowrap;
-      font-family: consolas;
-      border-right: 4px solid black;
-      width: 222ch;
-
-    }
-    @keyframes type{
-      0%{
-        width:0ch;
-      }
-      100%{
-        width: 22ch;
-      }
-    }
-    .animate2{
-       animation: type 5s steps(20);
-      overflow:hidden;
-      white-space: nowrap;
-      font-family: consolas;
-      border-right: 4px solid white;
-      width: 222ch;
-      color: white;
-
-    }
-    @keyframes type{
-      0%{
-        width:0ch;
-      }
-      100%{
-        width: 22ch;
-      }
-    }
-
-    }
-
-    .final{
-      float: left;
-      width: 33.33%;
-      padding: 10px;
-      height: 300px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Create three equal columns that floats next to each other */
-    .column1{
-      float: left;
-      width: 33%;
-      padding: 25px;
-      height: 600px; /* Should be removed. Only for demonstration */
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 600;
-      font-size: 40px;
-    }
-
-    .text {
-      position: absolute;
-      width: 450px;
-      left: 50%;
-      margin-left: -225px;
-      height: 40px;
-      top: 50%;
-      margin-top: -20px;
-    }
-
-    p {
-      display: inline-block;
-      vertical-align: top;
-      margin: 0;
-      font-size: 25px;
-      color: white;
-
-    }
-
-    .word {
-      position: absolute;
-      width: 220px;
-      opacity: 0;
-    }
-
-    .letter {
-      display: inline-block;
-      position: relative;
-      float: left;
-      transform: translateZ(25px);
-      transform-origin: 50% 50% 25px;
-    }
-
-    .letter.out {
-      transform: rotateX(90deg);
-      transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-
-    .letter.behind {
-      transform: rotateX(-90deg);
-    }
-
-    .letter.in {
-      transform: rotateX(0deg);
-      transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .wisteria {
-      color: #8e44ad;
-    }
-
-    .belize {
-      color: #2980b9;
-    }
-
-    .pomegranate {
-      color: #c0392b;
-    }
-
-    .green {
-      color: #16a085;
-    }
-
-    .midnight {
-      color: #2c3e50;
-    }
-
-    .vein{
-      width: 900px;
-      height: 400px;
-      align-content: center;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      
-    }
-    .vein2{
-      width: 900px;
-      height: 450px;
-      align-content: center;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 50px;
-      
-    }
-      
-    }
-
-    .div2 {
-      width: 500px;
-      height: 500px;  
-      padding: 50px;
-      border: 5px solid red;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Create two equal columns that floats next to each other */
-    .column {
-
-      float: left;
-      width: 40%;
-      height: 500px;
-      padding: 25px;
-      border: "thick solid #0000FF";
-
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    /* Style the buttons */
-    .btn {
-      border: none;
-      outline: none;
-      padding: 12px 16px;
-      background-color: #f1f1f1;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #ddd;
-    }
-
-    .btn.active {
-      background-color: #666;
-      color: white;
-    }
-
-    * {
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+* {
   box-sizing: border-box;
-    }
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+    background-image: url("tech2.gif");
 
-    /* Float four columns side by side */
-    .column1 {
-      float: left;
-      width: 50%;
-      padding: 20px;
-    }
+}
 
-    /* Remove extra left and right margins, due to padding */
-    .row {margin: 0 -5px;}
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 23px;
+  font-family: fantasy;
+  cursor: pointer;
+  color: white;
+}
 
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+.containerTab {
+  padding: 20px;
+  color: white;
+}
 
-    /* Responsive columns */
-    @media screen and (max-width: 600px) {
-      .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-      }
-    }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    /* Style the counter cards */
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      padding: 16px;
-      text-align: center;
-      background-color: #f1f1f1;
-    }
-
-    * {
-    box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    /* Float four columns side by side */
-    .column {
-      float: left;
-      width: 25%;
-      padding: 0 10px;
-      text-align: left;
-    }
-
-    /* Remove extra left and right margins, due to padding */
-    .row {margin: 0 -5px;}
-
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* Responsive columns */
-    @media screen and (max-width: 600px) {
-      .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-      }
-    }
-
-    /* Style the counter cards */
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      padding: 16px;
-      text-align: center;
-      background-color: #f1f1f1;
-    }
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
 
 
-    .navbar.navbar-9 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8');
-    }
-    .bg-company-red {
-        background-color: lightblue !important;
-    }
-    .navbar-default {
-      background: #000000;
-    }
-    .nav{
-      background-color: black;
-    }
-    .picci{
-      float: right;
-    }
 
-    .active {
-      background-color: #4CAF50;
-      color: white;
-    }
-    .bodyy{
-      background-image: url("tech2.gif");
-    }
+.navbar.navbar-9 .navbar-toggler-icon {
+background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8');
+}
+.bg-company-red {
+    background-color: lightblue !important;
+}
+.navbar-default {
+  background: #000000;
+}
+.nav{
+  background-color: black;
+}
+.picci{
+  float: right;
+}
 
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.bodyy{
+  background-image: url("tech2.gif");
+}
+.about-section {
+  padding: 25px;
+  text-align: center;
+  background-color: #474e5d;
+  color: black;
+ background-image: url("blogss.jpg");
+}
 
-    .active {
-      background-color: #4CAF50;
-      color: white;
-    }
-    .footer {
-       position: fixed;
-       left: 0;
-       bottom: 0;
-       width: 100%;
-       height: 60px;
-       background-color: lightgreen;
-       color: white;
-       text-align: center;
-       }
-       .fa {
-      padding: 20px;
-      font-size: 30px;
-      width: 15px;
-      height: 15px;
-      text-align: right;
-      text-decoration: none;
-      margin: 5px 2px;
-      border-radius: 50%;
-    }
+.container {
+  padding: 0 16px;
+}
 
-    .fa:hover {
-        opacity: 0.6;
-    }
-       .fa-facebook {
-      background: #3B5998;
-      color: white;
-    }
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-    .fa-linkedin {
-      background: #007bb5;
-      color: white;
-    }
-    .fa-instagram {
-      background: pink;
-      color: white;
-    }
-    .fa-github{
-      background:black;
-      color:white;
-    }
-    .text-foot{
-      text-align: left;
-    }
-    .split{
-      width: 50%;
-      position: fixed;
-      overflow-x: hidden;
-      height: 100%;
+.title {
+  color: grey;
+}
 
-    }
-    .left{
-      left:0;
-
-    }
-    .right{
-      right: 0;
-    }
-    .content{
-      font-size: 14;
-      font-style: Ariel;
-    }
 
 </style>
 </head>
-
 <body>
+  <div class="about-section">
+  <h1 style="font-size: 35px; font-family: ariel;"><b><u>Welcome to My blogs.</u></b></h1>
+  <p style="font-family: mosk;">I love to write blogs on dev2code and hashnode.</p>
+  <p>Here are the list of blogs, I've written.--></p>
+</div>
+
   <!--Navbar -->
 <div class="nav">
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
-  <div style="font-family: fantasy; font-size: 32px;">
-  <a class="navbar-brand" href="#">TECHNOLOGY</a>
-</div>
+  <a class="navbar-brand" href="#">Welcome</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
     aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="index.html">Home</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="myprojects2.html">Projects</a> 
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="about.html">About me
+        <a class="nav-link" href="blogs.html">Blogs
+          <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="myprojects2.html">Projects</a>
-         <span class="sr-only">(current)</span>
-      </li>    
-      <li class="nav-item">
-        <a class="nav-link" href="blogs.html">Blogs</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
+       <li class="nav-item">
+        <a class="nav-link" href="contactme.html">Contact</a>
       </li>
     </ul>
     <div class="picci">
@@ -533,308 +150,138 @@
 </div>
 </nav>
 </div>
-  <!-- Top Navigation Menu -->
-
-
-
-   </body>
-   <br><br>
-   <br>
-<body style="background-color: black;">
-  <div class="final">
-  
-      <div class = "div1">
-    <img src="anshika.png" width="350" height="350" style="border-radius: 20px; border-style: dotted; border-color: silver;" >
-  </div>
-  
-
-<div class="text">
-  <div class="text">
-  <h style="font-size: 60px; color: red; font-family: Quirlycues; text-align: left; text-shadow: 2.5px 2.5px">Meet Anshika ...</h>
-</div>
-  <br><br><br><br><br><br><br>
-  <p >She is a :- {  </p>
-  <p>
-    <span class="word wisteria">PythonDeveloper.</span>
-    <span class="word belize">MLExpert.</span>
-    <span class="word pomegranate">DataScientist.</span>
-    <span class="word green">FlutterDeveloper.</span>
-    <span class="word midnight">JuliaDeveloper.</span>
-  </p>
-
-  <br><br> <br><br><br>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div> </script>
-</body>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-<body>
-  <br><br><br><br><br><br><br><br><br>
-<div class="container p-3 my-3 border">
-   <h2 style="color: white; font-style: bold; font-family: sans-serif;"><u>Introduction<u></h2>
-    <p>
-      <p style="font-size: 15px; letter-spacing: 3px; font-family: script; color:turquoise;">
-      <br>
-      I am Anshika Bhatnagar.
-      <br>I love to do comeptitive programming.
-      <br>I am a full stack python developer 
-      and love to work on Machine Learning, Data science and Artificial Intelligence.
-      I love to explore new technologies.
-    </p>
-    </p>
-</div>
-
-<div class="container p-3 my-3 bg-dark text-white">
-  <h2 style="color: white; font-style: bold; font-family: sans-serif;"><u>Acheivements</u></h2>
-    <p>
-      <ul style="font-size: 15px; letter-spacing: 3px; font-family: script; color:turquoise;">
-        <li>Third Position at Codechef CodeBooster:Chapter 1 Contest.</li>
-        <li>Winner at W#Code Begins, women's day Contest.</li>
-        <li>Winner At Blind Coding Contest At Xception 3.0, UEC Ujjain.</li>
-        <li>Winner At Code2Do Team Coding Contest At Xception 3.0,UEC Ujjain.</li>
-      </ul>
-
-    </p>
-</div>
-
-<div class="container p-3 my-3 border">
-  <h2 style="color: white; font-style: bold; font-family: sans-serif;"><u>Positions</u></h2>
-    <p>
-      <ul style="font-size: 18px; letter-spacing: 3px; font-family: script; color:turquoise;">
-        <li>Campus lead at Facebook Developer Circles </li>
-        <li>Technical Learing Lead, Codechef MGI Chapter</li>
-        <li>Campus Ninja, Coding Ninjas</li>
-        <li>Data science mentor at Girlscript Foundation</li>
-
-      </ul>
-    </p>
-</div>
-
-<div class="container p-3 my-3 bg-dark text-white">
-  <h2 style="color: white; font-style: bold; font-family: sans-serif;"><u>Certifications</u></h2>
-    <p>
-      <ul style="font-size: 16px; letter-spacing: 3px; font-family: script; color:turquoise;">
-        <li> Certified data Scientist from IIT, Madras.</li>
-        <li>Udacity AWS Machine Learning Foundations Course(ongoing)</li>
-        <li>Core+ Advance Java with Angular Framework (Summer Training)</li>
-        <li>Machine Learning WebApp Creation using Streamlit, Coursera</li>
-        <li>Introduction to SQL, Datacamp</li>
-        <li>Introduction to Git, Datacamp</li>
-        <li>Image Processing, Datacamp</li>
-        <li>Augmented Reality Course from Facebook School Of Innovation</li>
-        <li>Python and Web Development Training (Summer 2019)</li>
-        <li>C/C++ Summer Training by FACE</li>
-      </ul>
-    </p>
-</div>
-
-</body>
-
-<br><br><br><br><br><br><br><br>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <h3 style="text-align: center;"><u>Frameworks</u></h3>
-      <br>
-      <ul style="text-align: left; font-family: sans-serif;">
-        <li>Django</li>
-        <li>Flask</li>
-        <li>Kivy</li>
-        <li>Angular</li>
-        <li>Tkinter</li>
-      </ul>
-      
-    </ul>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <h3><u>Area Of Interest</u></h3>
-      <br>
-      <ul style="text-align: left; font-family: sans-serif;">
-        <li>Data Science</li>
-        <li>Machine Learning</li>
-        <li>Software Development</li>
-        <li>Web application development</li>
-        <li>Website development</li>
-
-      </ul>
-      
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3 style="align-content: center;"><u>Prog. Languages</u></h3>
-      <br>
-      <ul>
-        <li>Python</li>
-        <li>Julia</li>
-        <li>R</li>
-        <li>C/C++</li>
-        <li>Java and Ruby</li>
-        
-      </ul>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <h3 style="align-content: center;"><u>Scripting Language</u></h3>
-      <br>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>AngularJS</li>
-        <li>Typescript</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-</body>
-<head>
-<!-- Font Awesome Icon Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.checked {
-  color: orange;
-}
-</style>
-</head>
-
-</body>
-
-
-<script>
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
-
-// Declare a loop variable
-var i;
-
-// List View
-function listView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "100%";
-  }
-}
-
-// Grid View
-function gridView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "50%";
-  }
-}
-
-/* Optional: Add active class to the current button (highlight it) */
-var container = document.getElementById("btnContainer");
-var btns = container.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
-</body>
-<style>
-.card2 {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 80%;
-  height: 60%;
-}
-
-.card2:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-</style>
-
-<div class="card2">
-  <img src= "graphy.png" alt="Avatar" style="width:100%">
-<r><br><br><br>
-
-<div class="card2">
-  <img src="we.png" alt="Avatar" style="width:100%">
-  <br><br><br><br><br>
-</div>
+<!--/.Navbar -->
 <br><br>
-<div class="card2">
-  <img src="we(3).png" style="width: 100%">
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    Gender Nuetral Language.
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    SVM - All you need to know.
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    Market Basket Analysis - A broad view.
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
   
 </div>
 
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+    
+</div>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+  
+</div>
+
 <script>
-  var words = document.getElementsByClassName('word');
-var wordArray = [];
-var currentWord = 0;
-
-words[currentWord].style.opacity = 1;
-for (var i = 0; i < words.length; i++) {
-  splitLetters(words[i]);
-}
-
-function changeWord() {
-  var cw = wordArray[currentWord];
-  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
-  for (var i = 0; i < cw.length; i++) {
-    animateLetterOut(cw, i);
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
-  
-  for (var i = 0; i < nw.length; i++) {
-    nw[i].className = 'letter behind';
-    nw[0].parentElement.style.opacity = 1;
-    animateLetterIn(nw, i);
-  }
-  
-  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+  document.getElementById(tabName).style.display = "block";
 }
-
-function animateLetterOut(cw, i) {
-  setTimeout(function() {
-    cw[i].className = 'letter out';
-  }, i*80);
-}
-
-function animateLetterIn(nw, i) {
-  setTimeout(function() {
-    nw[i].className = 'letter in';
-  }, 340+(i*80));
-}
-
-function splitLetters(word) {
-  var content = word.innerHTML;
-  word.innerHTML = '';
-  var letters = [];
-  for (var i = 0; i < content.length; i++) {
-    var letter = document.createElement('span');
-    letter.className = 'letter';
-    letter.innerHTML = content.charAt(i);
-    word.appendChild(letter);
-    letters.push(letter);
-  }
-  
-  wordArray.push(letters);
-}
-
-changeWord();
-setInterval(changeWord, 4000);
 </script>
-<br><br><br>
+
+</body>
+<br><br>
+<body>
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b4');" style="background:green;">
+    Random Forest - All you need to know.
+  </div>
+  <div class="column" onclick="openTab('b5');" style="background:blue;">
+    Getting started with flask.
+  </div>
+  <div class="column" onclick="openTab('b6');" style="background:red;">
+    Twitter Sentiment Analysis.
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b4" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+</div>
+
+<div id="b5" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+</div>
+
+<div id="b6" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+</div>
+ <br><br><br>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b7');" style="background:green;">
+    Optimized balanced paranthesis solution in python.
+  </div>
+  <div class="column" onclick="openTab('b8');" style="background:blue;">
+    Python - what , why and where?
+  </div>
+  <div class="column" onclick="openTab('b9');" style="background:red;">
+    Twitter Sentiment Analysis.
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b7" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+</div>
+
+<div id="b8" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+</div>
+
+<div id="b9" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2 style="font-size: 23px;">Read full blog here.</h2>
+</div>
+ <br><br><br><br>
+<style>
+.glow {
+  font-size: 22px;
+  color: #fff;
+  font-family: timesnewroman;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+</style>
+<div class="glow">
+  <a href="https://dev.to/bhatnagaranshika02"> - Visit DEV2 Profile.</a>
+  <br><br>
+  <a href="https://hashnode.com/@VisionaryAnshika"> - Visit Hashnode Profile</a>
+</div>
 <style>
 .active {
   background-color: #4CAF50;
@@ -846,7 +293,7 @@ setInterval(changeWord, 4000);
    bottom: 0;
    width: 100%;
    height: 60px;
-   background-color: lighthgngreen;
+   background-color: lightgreen;
    color: white;
    text-align: center;
    }
@@ -903,8 +350,10 @@ setInterval(changeWord, 4000);
   font-style: Ariel;
 }
 </style>
+
 <body>
-  <div class="footer">
+  <br><br><br><br><br>
+<div class="footer">
 
       <div class="split left">
       <p style="color: black"><b><marquee>For more information, contact me<br>Linkdin | Instagram | facebook | github</marquee></b></p>
@@ -918,6 +367,7 @@ setInterval(changeWord, 4000);
   </div>
 </div>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
 </body>
 
