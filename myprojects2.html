@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+
+
+
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 25px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+.navbar.navbar-9 .navbar-toggler-icon {
+background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8');
+}
+.bg-company-red {
+    background-color: lightblue !important;
+}
+.navbar-default {
+  background: #000000;
+}
+.nav{
+  background-color: orange;
+}
+.picci{
+  float: right;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.bodyy{
+  background-image: url("tech2.gif");
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 60px;
+   background-color: red;
+   color: white;
+   text-align: center;
+   }
+
+.split{
+  width: 50%;
+  position: fixed;
+  overflow-x: hidden;
+  height: 100%;
+
+}
+.left{
+  left:0;
+
+}
+.right{
+  right: 0;
+}
+
+ .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 15px;
+  height: 15px;
+  text-align: right;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.6;
+}
+   .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: pink;
+  color: white;
+}
+.fa-github{
+  background:black;
+  color:white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+
+<!--Navbar -->
+<div class="nav">
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+  <a class="navbar-brand" href="#">Welcome</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About me</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="myprojects2.html">Projects
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>     
+      <li class="nav-item">
+        <a class="nav-link" href="blogs.html">Blogs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactme.html">Contact</a>
+      </li>
+    </ul>
+    <div class="picci">
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item avatar">
+        <a class="nav-link p-0" href="#">
+          <img src="anshi.jpg" class="rounded-circle z-depth-0"
+            alt="avatar image" height="50" width="50" style="float: right;">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+</div>
+<!--/.Navbar -->
+<body class="bodyy">
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="bus.png" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Bus Tracking system.</h2>
+        <p class="title">Python, Kivy, Firebase, Google Maps API.</p>
+        <p>This is a bus tracking android application. 
+        This was made with the purpose to help students 
+        and faculties to know whereabouts of the bus
+        and avoid the panic of bus location</p>
+        
+        <p><a href="https://github.com/bhatnagaranshika02/MinorProject1"><button class="button">View source code.</button></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="automl.png" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Auto ML</h2>
+        <p class="title">Streamlit, Scikit-Learn, Python</p>
+        <p>This is a web application made to 
+        ease the learning of machine learning enthusiasts 
+        by letting them explore datasets and
+        perform machine learning predictions 
+        without any coding and deep statistics knowledge</p>
+        <p><a href="#"><button class="button">View source code.</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="blog.png" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Blogify</h2>
+        <p class="title">Django, SQLite.</p>
+        <p>This is a web application which lets the user posts, update, delete and read blogs on it.</p>
+        <br><br><br>
+        <p><a href="https://github.com/bhatnagaranshika02/Blogify"><button class="button">View source code.</button></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Language Translation Application.</h2>
+        <p class="title">Tkinter, Python.</p>
+        <p>This is a GUI Application which lets user translate the text from one language to another.
+       This is made using python language.</p>
+        <br><br><br>
+        <p><a href="https://github.com/bhatnagaranshika02/Translator"><button class="button">View Source Code.</button></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Sentence Correction Application.</h2>
+        <p class="title">Tkinter, Python.</p>
+        <p>This is a GUI Application which helps in correcting sentences by using python packages</p>
+        <br><br><br>
+        <p><a href="https://github.com/bhatnagaranshika02/SentenceCorrection"><button class="button">View Source Code.</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>News Reader Application.</h2>
+        <p class="title">Web Scrapping, Beautiful Soup, Kivy</p>
+        <p>This is a GUI Application which brings news posts from sites to make a common place for reading news
+      and also reads them so person can focus on their other tasks while listening to news</p>
+        <br><br><br>
+        <p><a href="https://github.com/bhatnagaranshika02/newsreader"><button class="button">View Source Code.</button></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<body>
+
+<h2 style="color: white; font-family: fantasy; font-weight: 34px; "><u>Some other projects:-</u></h2>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <ul style="font-size: 20px; font-family: timesnewroman;">
+      <li><a href="https://github.com/bhatnagaranshika02/VideoCalling">Video Calling Application</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/CartoonifyApplication">Cartoonify Application.</a> </li>
+      <li><a href="https://github.com/bhatnagaranshika02/QRCodeGenerator">QR Code Generator</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/MotionDetectorAlarm">OpenCV Motion Detector</a></li>
+    </ul>
+    
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <ul style="font-size: 20px; font-family: timesnewroman;">
+      <li><a href="https://github.com/bhatnagaranshika02/ChatBots">Chatbots</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/Password-Generator">Password generator</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/DigitRecognition">Handwritten Digit Analysis.</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/BreastCancerBySVM">Breast Cancer Analysis.</a></li>
+    </ul>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <ul style="font-size: 20px; font-family: timesnewroman;">
+      <li><a href="https://github.com/bhatnagaranshika02/WineClassifier">Wine Prediction.</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/Recommendation-App">Recommendation Engine.</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/SpamDetection">Spam Detection.</a></li>
+      <li><a href="https://github.com/bhatnagaranshika02/SentimentAnalysis">Sentiment Analysis.</a></li>
+    </ul>
+  </div>
+
+</body>
+<br><br>
+</body>
+</div>
+<br>
+<style>
+#div1 {
+  font-size:48px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div id="div1" class="fa"></div>
+
+<script>
+function hand() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf25a;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf256;";
+    }, 500);
+  setTimeout(function () {
+      a.innerHTML = "&#xf259;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf256;";
+    }, 1500);
+}
+hand();
+setInterval(hand, 2000);
+</script>
+
+<p style="font-family: fantasy; font-size: 32px; color: #FAEAF8 ;"><a href="https://github.com/">Visit my Github for more...</a></p>
+</body>
+</html>
+
+<br><br><br>
+
+<br><br><br>
+ <div class="footer">
+
+      <div class="split left">
+      <p style="color: black"><b><marquee>For more information, contact me<br>LinkedIn | Instagram | Facebook | Github</marquee></b></p>
+    </div>
+    <div class = "split right">
+    
+      <a href="https://www.facebook.com/anshika.bhatnagar.796/" class="fa fa-facebook"> </a>
+      <a href="https://www.linkedin.com/in/anshikabhatnagar/" class="fa fa-linkedin"> </a>
+      <a href="https://www.instagram.com/anshika_rekha_bhatnagar/" class="fa fa-instagram"></a>
+      <a href="https://github.com/bhatnagaranshika02" class="fa fa-github">   </a>
+  </div>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</body>
+
+</body>
+</html>
