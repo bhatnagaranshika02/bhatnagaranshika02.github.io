@@ -176,11 +176,31 @@ background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FB
 }
 
 </style>
+  <style>
+.glow {
+  color: #fff;
+  font-family: timesnewroman;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+</style>
 </head>
 <body>
 
 <div class="about-section">
-  <h1 style="font-size:33px; font-family:ariel; color:black"><u><b>Project Page</u><b></h1>
+  <div class="glow">
+    <h1 style="font-size:35px; font-family:ariel; color:black"><u><b>Project Page</u><b></h1></div>
     <p style="color:black;"><b>This is the page where I have listed down some of the projects that I have done</b></p>
     <p style="color:black;"><b>There are some more mini projects which I have listed on my github profile</b></p>
 </div>
@@ -389,7 +409,7 @@ hand();
 setInterval(hand, 2000);
 </script>
 
-<p style="font-family: fantasy; font-size: 32px; color: #FAEAF8 ;"><a href="https://github.com/">Visit my Github for more...</a></p>
+<p style="font-family: fantasy; font-size: 28px; color: #FAEAF8 ;"><a href="https://github.com/">Visit my Github for more...</a></p>
 </body>
 </html>
 
