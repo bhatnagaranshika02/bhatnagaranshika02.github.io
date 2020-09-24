@@ -1,193 +1,206 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url(tech.gif);
-}
-.square{
-  border: 5px solid green;
-  background-color: lightgreen;
-  display: block;
-   align-self: center;
-   font-color: white;
-    text-align: center;
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url(images/tech.gif);
+    }
 
-    width: 50%;
+    .square{
+      border: 5px solid green;
+      background-color: lightgreen;
+      display: block;
+      align-self: center;
+      font-color: white;
+      text-align: center;
+      width: 50%;
+      height: 20%;
+      box-shadow: 15px 15px darkgreen; 
+    }
 
-    height: 20%;
-    box-shadow: 15px 15px darkgreen; 
-}
-.mobile-container {
-  max-width: 480px;
-  margin: auto;
-  background-color: #555;
-  height: 500px;
-  color: white;
-  border-radius: 10px;
+    .active {
+      background-color: #4CAF50;
+      color: white;
+    }
 
-}
+    /*Footer CSS*/
+    .footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       height: 100px;
+       background-color: red;
+       color: white;
+       text-align: center;
+       }
 
+    .upperfooter {
+      height: 70%;
+    }
 
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 60px;
-   background-color: red;
-   color: white;
-   text-align: center;
-   }
-   .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 15px;
-  height: 15px;
-  text-align: right;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
+    .lowerfooter {
+      height: 30%;
+      text-align: center;
+      background-color: grey;
+      color: green;
+    }
 
-.fa:hover {
-    opacity: 0.6;
-}
-   .fa-facebook {
-  background: #3B5998;
-  color: white;
-}
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 15px;
+      height: 15px;
+      text-align: right;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
 
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-.fa-instagram {
-  background: pink;
-  color: white;
-}
-.fa-github{
-  background:black;
-  color:white;
-}
-.text-foot{
-  text-align: left;
-}
-.split{
-  width: 50%;
-  position: fixed;
-  overflow-x: hidden;
-  height: 100%;
+    .fa:hover {
+        opacity: 0.6;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
 
-}
-.left{
-  left:0;
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    .fa-instagram {
+      background: pink;
+      color: white;
+    }
+    .fa-github{
+      background:black;
+      color:white;
+    }
+    .text-foot{
+      text-align: left;
+    }
 
-}
-.right{
-  right: 0;
-}
-.content{
-  font-size: 14;
-  font-style: Ariel;
-}
+    .split{
+      width: 50%;
+      position: fixed;
+      overflow-x: hidden;
+      height: 100%;
+    }
 
+    .left{
+      left:0;
+    }
 
-.parallax {
-  /* The image used */
-  background-image: url("2.jpg");
+    .right{
+      right: 0;
+    }
 
-  /* Set a specific height */
-  min-height: 500px; 
+    .content{
+      font-size: 14;
+      font-style: Ariel;
+    }
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  position: relative;
-  animation-name: example;
-  animation-duration: 6s;
-}
-
-@keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
-}
-}
-
-.blinking{
-    animation:blinkingText 4s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: #ffffff;    }
-    49%{    color: #ffffff; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #ffffff;    }
-}
+   /*Footer CSS Ends*/
 
 
-</style>
+    .parallax {
+      /* The image used */
+      background-image: url("2.jpg");
+
+      /* Set a specific height */
+      min-height: 500px; 
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    @media only screen and (max-device-width: 1366px) {
+      .parallax {
+        background-attachment: scroll;
+      }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      position: relative;
+      animation-name: example;
+      animation-duration: 6s;
+    }
+
+    @keyframes example {
+      0%   {background-color:red; left:0px; top:0px;}
+      25%  {background-color:yellow; left:200px; top:0px;}
+      50%  {background-color:blue; left:200px; top:200px;}
+      75%  {background-color:green; left:0px; top:200px;}
+      100% {background-color:red; left:0px; top:0px;}
+    }
+    }
+
+    .blinking{
+        animation:blinkingText 4s infinite;
+    }
+    @keyframes blinkingText{
+        0%{     color: #ffffff;    }
+        49%{    color: #ffffff; }
+        60%{    color: transparent; }
+        99%{    color:transparent;  }
+        100%{   color: #ffffff;    }
+    }
+  </style>
 </head>
+
 <body>
     <!-- Top Navigation Menu -->
     <div id="mySidenav" class="sidenav">
@@ -196,42 +209,48 @@ body {
       text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"><marquee>TECHnophile Anshika</marquee></p>
       <br>
 
-      <img src="anshi.jpg" style="width:150px;height:150px; border-radius:8px; border: 1px solid #ddd;  padding: 5px;
+      <img src="images/anshika-index.jpg" style="width:150px;height:150px; border-radius:8px; border: 1px solid #ddd;  padding: 5px;
       width: 150px;" class="center">
       <br>
       <br>
       
       <a href="#" style="font-size: 16px; font-family: timesnewroman;"><u>* Mail me</u></a>
-      <a href="contactme.html" style="font-size: 16px; font-family: timesnewroman;"><u>* Contact me</u></a>
+      <a href="contact.html" style="font-size: 16px; font-family: timesnewroman;"><u>* Contact me</u></a>
     </div>
 
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;<<--</span>
+    <!--End of Navigation Menu -->
 
-    <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
 
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-    </script>
-
-    <!--footer-->
+    <!-- Start of Footer-->
     <div class="footer">
-      <div class="split left">
-        <p style="color: black">
-          <b><marquee>For more information, contact me<br>LinkedIn | Instagram | Facebook | Github</marquee></b>
-        </p>
+      <div class="upperfooter">
+        <div class="split left">
+          <p style="color: black">
+            <b><marquee>For more information, contact me<br>LinkedIn | Instagram | Facebook | Github</marquee></b>
+          </p>
+        </div>
+        <div class = "split right">
+          <a href="https://www.facebook.com/anshika.bhatnagar.796/" class="fa fa-facebook"> </a>
+          <a href="https://www.linkedin.com/in/anshikabhatnagar/" class="fa fa-linkedin"> </a>
+          <a href="https://www.instagram.com/anshika_rekha_bhatnagar/" class="fa fa-instagram"></a>
+          <a href="https://github.com/bhatnagaranshika02" class="fa fa-github">   </a>
+        </div>
       </div>
-      <div class = "split right">
-        <a href="https://www.facebook.com/anshika.bhatnagar.796/" class="fa fa-facebook"> </a>
-        <a href="https://www.linkedin.com/in/anshikabhatnagar/" class="fa fa-linkedin"> </a>
-        <a href="https://www.instagram.com/anshika_rekha_bhatnagar/" class="fa fa-instagram"></a>
-        <a href="https://github.com/bhatnagaranshika02" class="fa fa-github">   </a>
+
+      <div class="lowerfooter">
+        <div>
+          <p>
+            Made with &#10084 by Anshika. All rights reserved. &#9400; 2020
+          </p>
+        </div>
       </div>
     </div>
+   
+    <!-- End of Footer -->
 
+
+    <!-- Main Section -->
     <br>
     <center>
     <div class="parallax">
@@ -259,7 +278,7 @@ body {
         <a href="about.html" style="color: white;">
             <button type="button" class="btn btn-outline-dark">About Me</button>
          </a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-         <a href="myprojects2.html"> 
+         <a href="projects.html"> 
             <button type="button" class="btn btn-outline-dark">Projects</button>
           </a>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
          <a href="blogs.html">  
@@ -267,11 +286,24 @@ body {
         </a>
     </div>
   </div>
+  <!-- End of Main Section -->
+
+
   <br/><br/><br/>
   </center>
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-   </body>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
 
-   </html>
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+</body>
+
+</html>

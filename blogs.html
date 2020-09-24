@@ -1,375 +1,413 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+ <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+        background-image: url("images/tech2.gif");
+
+    }
+
+    /* The grid: Three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 50px;
+      text-align: center;
+      font-size: 23px;
+      font-family: fantasy;
+      cursor: pointer;
+      color: white;
+    }
+
+    .containerTab {
+      padding: 20px;
+      color: white;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Closable button inside the container tab */
+    .closebtn {
+      float: right;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
+    .navbar.navbar-9 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8');
+    }
+
+    .bg-company-red {
+        background-color: lightblue !important;
+    }
+    .navbar-default {
+      background: #000000;
+    }
+
+    .nav{
+      background-color: orange;
+    }
+
+    .picci{
+      float: right;
+    }
+
+    .active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .bodyy{
+      background-image: url("images/tech2.gif");
+    }
+
+    .about-section {
+      padding: 26px;
+      text-align: center;
+      background-color: #474e5d;
+      color: black;
+     background-image: url("images/blogbg1.jpg");
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .glow {
+    font-size: 20px;
+    color: #fff;
+    font-family: timesnewroman;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      }
+      
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+
+    /*Footer CSS starts*/
+    .footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       height: 100px;
+       background-color: red;
+       color: white;
+       text-align: center;
+       }
+
+    .upperfooter {
+      height: 70%;
+    }
+
+    .lowerfooter {
+      height: 30%;
+      text-align: center;
+      background-color: grey;
+      color: green;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 15px;
+      height: 15px;
+      text-align: right;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+        opacity: 0.6;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    .fa-instagram {
+      background: pink;
+      color: white;
+    }
+    .fa-github{
+      background: black;
+      color: white;
+    }
+    .text-foot{
+      text-align: left;
+    }
+
+    .split{
+      width: 50%;
+      position: fixed;
+      overflow-x: hidden;
+      height: 100%;
+    }
+
+    .left{
+      left:0;
+    }
+
+    .right{
+      right: 0;
+    }
+
+    .content{
+      font-size: 14;
+      font-style: Ariel;
+    }
+
+    /*Footer CSS Ends*/
+  </style>
 </head>
-<style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-    background-image: url("tech2.gif");
-
-}
-
-/* The grid: Three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 50px;
-  text-align: center;
-  font-size: 23px;
-  font-family: fantasy;
-  cursor: pointer;
-  color: white;
-}
-
-.containerTab {
-  padding: 20px;
-  color: white;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Closable button inside the container tab */
-.closebtn {
-  float: right;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-
-
-.navbar.navbar-9 .navbar-toggler-icon {
-background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=00FBD8');
-}
-.bg-company-red {
-    background-color: lightblue !important;
-}
-.navbar-default {
-  background: #000000;
-}
-.nav{
-  background-color: orange;
-}
-.picci{
-  float: right;
-}
-
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-.bodyy{
-  background-image: url("tech2.gif");
-}
-.about-section {
-  padding: 26px;
-  text-align: center;
-  background-color: #474e5d;
-  color: black;
- background-image: url("blogss.jpg");
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-
-</style>
-</head>
 <body>
+
+  <!-- About Section starts-->
   <div class="about-section">
-  <div class="glow"><h1 style="font-size: 35px; font-family: ariel; color:black;"><b><u>Welcome to My blogs.</u></b></h1></div>
-  <p style="font-family: mosk;"><b>I love to write blogs on dev2code and hashnode.</p>
-  <p>Here are the list of blogs, I've written.--></b></p>
-</div>
+    <div class="glow"><h1 style="font-size: 35px; font-family: ariel; color:black;"><b><u>Welcome to My blogs.</u></b></h1></div>
+    <p style="font-family: mosk;"><b>I love to write blogs on dev2code and hashnode.</p>
+    <p>Here are the list of blogs, I've written.--></b></p>
+  </div>
+  <!--end of About Section-->
 
-  <!--Navbar -->
-<div class="nav">
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
-  <a class="navbar-brand" href="#">Welcome</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+  <!--Navbar starts -->
+  <div class="nav">
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+      <a class="navbar-brand" href="#">Welcome</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
     aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">About me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="myprojects2.html">Projects</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="blogs.html">Blogs
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contactme.html">Contact</a>
-     </li>
-    </ul>
-    <div class="picci">
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item avatar">
-        <a class="nav-link p-0" href="#">
-          <img src="anshi.jpg" class="rounded-circle z-depth-0"
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+         </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="blogs.html">Blogs
+            <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      <div class="picci">
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item avatar">
+            <a class="nav-link p-0" href="#">
+              <img src="images/anshika-index.jpg" class="rounded-circle z-depth-0"
             alt="avatar image" height="50" width="50" style="float: right;">
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-</nav>
-</div>
-<!--/.Navbar -->
-<br><br>
-<!-- Three columns -->
-<div class="row">
-  <div class="column" onclick="openTab('b1');" style="background:green;">
-    Gender Neutral Language.
-  </div>
-  <div class="column" onclick="openTab('b2');" style="background:blue;">
-    SVM - All you need to know.
-  </div>
-  <div class="column" onclick="openTab('b3');" style="background:red;">
-    Market Basket Analysis - A broad view.
-  </div>
-</div>
-
-<!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:green">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <a href="https://anshi.hashnode.dev/gender-neutral-language"><h2 style="font-size: 20px;">Read full blog here.</h2>
-  </a>
-</div>
-
-<div id="b2" class="containerTab" style="display:none;background:blue">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <a href="https://anshi.hashnode.dev/support-vector-machine-all-you-need-to-know"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
-    
-</div>
-
-<div id="b3" class="containerTab" style="display:none;background:red">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2 style="font-size: 23px;">Read full blog here.</h2>
-  
-</div>
-
-<script>
-function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-}
-</script>
-
-</body>
-<br><br>
-<body>
-<!-- Three columns -->
-<div class="row">
-  <div class="column" onclick="openTab('b4');" style="background:green;">
-    Random Forest - All you need to know.
-  </div>
-  <div class="column" onclick="openTab('b5');" style="background:blue;">
-    Getting started with flask.
-  </div>
-  <div class="column" onclick="openTab('b6');" style="background:red;">
-   <a href="https://dev.to/bhatnagaranshika02/how-i-got-the-github-student-developer-pack-hji"><h2 style="font-size: 20px;"> How I got Github Student developer pack</a>
-  </div></h2>
-</div>
-
-<!-- Full-width columns: (hidden by default) -->
-<div id="b4" class="containerTab" style="display:none;background:green">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
- <a href="https://anshi.hashnode.dev/random-forest-all-you-need-to-know"> <h2 style="font-size: 20px;">Read full blog here.</h2>
-</div>
-
-<div id="b5" class="containerTab" style="display:none;background:blue">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <a href="https://dev.to/bhatnagaranshika02/getting-started-with-flask-36c"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
-</div>
-
-<div id="b6" class="containerTab" style="display:none;background:red">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2 style="font-size: 23px;">Read full blog here.</h2>
-</div>
- <br><br>
-
-<!-- Three columns -->
-<div class="row">
-  <div class="column" onclick="openTab('b7');" style="background:green;">
-    Optimized balanced paranthesis solution in python.
-  </div>
-  <div class="column" onclick="openTab('b8');" style="background:blue;">
-    Python - what , why and where?
-  </div>
-  <div class="column" onclick="openTab('b9');" style="background:red;">
-    Twitter Sentiment Analysis.
-  </div>
-</div>
-
-<!-- Full-width columns: (hidden by default) -->
-<div id="b7" class="containerTab" style="display:none;background:green">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <a href="https://dev.to/bhatnagaranshika02/optimized-balanced-paranthesis-solution-in-python-652"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
-</div>
-
-<div id="b8" class="containerTab" style="display:none;background:blue">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <a href="https://dev.to/bhatnagaranshika02/quick-guide-to-python-38l6"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
-</div>
-
-<div id="b9" class="containerTab" style="display:none;background:red">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <h2 style="font-size: 23px;">Read full blog here.</h2>
-</div>
- <br><br><br><br>
-<style>
-.glow {
-  font-size: 20px;
-  color: #fff;
-  font-family: timesnewroman;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-</style>
-<div class="glow">
-  <a href="https://dev.to/bhatnagaranshika02"> - Visit DEV2 Profile.</a>
-  <br><br>
-  <a href="https://hashnode.com/@VisionaryAnshika"> - Visit Hashnode Profile</a>
-</div>
-<style>
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 60px;
-   background-color: lightgreen;
-   color: white;
-   text-align: center;
-   }
-   .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 15px;
-  height: 15px;
-  text-align: right;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.6;
-}
-   .fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-.fa-instagram {
-  background: pink;
-  color: white;
-}
-.fa-github{
-  background:black;
-  color:white;
-}
-.text-foot{
-  text-align: left;
-}
-.split{
-  width: 50%;
-  position: fixed;
-  overflow-x: hidden;
-  height: 100%;
-
-}
-.left{
-  left:0;
-
-}
-.right{
-  right: 0;
-}
-.content{
-  font-size: 14;
-  font-style: Ariel;
-}
-</style>
-
-<body>
-  <br><br><br>
-<div class="footer">
-
-      <div class="split left">
-      <p style="color: black"><b><marquee>For more information, contact me<br>Linkdin | Instagram | facebook | github</marquee></b></p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class = "split right">
-    
-      <a href="https://www.facebook.com/anshika.bhatnagar.796/" class="fa fa-facebook"> </a>
-      <a href="https://www.linkedin.com/in/anshikabhatnagar/" class="fa fa-linkedin"> </a>
-      <a href="https://www.instagram.com/anshika_rekha_bhatnagar/" class="fa fa-instagram"></a>
-      <a href="https://github.com/bhatnagaranshika02" class="fa fa-github">   </a>
-  </div>
-</div>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </nav>
+ </div>
+ <!-- Navbar End-->
 
+  <!--Blog Section starts-->
+  <br><br>
+  <!-- Three columns -->
+  <div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:green;">
+      Gender Neutral Language.
+    </div>
+    <div class="column" onclick="openTab('b2');" style="background:blue;">
+      SVM - All you need to know.
+    </div>
+    <div class="column" onclick="openTab('b3');" style="background:red;">
+      Market Basket Analysis - A broad view.
+    </div>
+  </div>
+
+  <!-- Full-width columns: (hidden by default) -->
+  <div id="b1" class="containerTab" style="display:none;background:green">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <a href="https://anshi.hashnode.dev/gender-neutral-language"><h2 style="font-size: 20px;">Read full blog here.</h2>
+    </a>
+  </div>
+
+  <div id="b2" class="containerTab" style="display:none;background:blue">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <a href="https://anshi.hashnode.dev/support-vector-machine-all-you-need-to-know"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
+      
+  </div>
+
+  <div id="b3" class="containerTab" style="display:none;background:red">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <h2 style="font-size: 23px;">Read full blog here.</h2>
+    
+  </div>
+
+  <br><br>
+  <!-- Three columns -->
+  <div class="row">
+    <div class="column" onclick="openTab('b4');" style="background:green;">
+      Random Forest - All you need to know.
+    </div>
+    <div class="column" onclick="openTab('b5');" style="background:blue;">
+      Getting started with flask.
+    </div>
+    <div class="column" onclick="openTab('b6');" style="background:red;">
+     <a href="https://dev.to/bhatnagaranshika02/how-i-got-the-github-student-developer-pack-hji"><h2 style="font-size: 20px;"> How I got Github Student developer pack</a>
+    </div></h2>
+  </div>
+
+  <!-- Full-width columns: (hidden by default) -->
+  <div id="b4" class="containerTab" style="display:none;background:green">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+   <a href="https://anshi.hashnode.dev/random-forest-all-you-need-to-know"> <h2 style="font-size: 20px;">Read full blog here.</h2>
+  </div>
+
+  <div id="b5" class="containerTab" style="display:none;background:blue">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <a href="https://dev.to/bhatnagaranshika02/getting-started-with-flask-36c"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
+  </div>
+
+  <div id="b6" class="containerTab" style="display:none;background:red">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <h2 style="font-size: 23px;">Read full blog here.</h2>
+  </div>
+   <br><br>
+
+  <!-- Three columns -->
+  <div class="row">
+    <div class="column" onclick="openTab('b7');" style="background:green;">
+      Optimized balanced paranthesis solution in python.
+    </div>
+    <div class="column" onclick="openTab('b8');" style="background:blue;">
+      Python - what , why and where?
+    </div>
+    <div class="column" onclick="openTab('b9');" style="background:red;">
+      Twitter Sentiment Analysis.
+    </div>
+  </div>
+
+  <!-- Full-width columns: (hidden by default) -->
+  <div id="b7" class="containerTab" style="display:none;background:green">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <a href="https://dev.to/bhatnagaranshika02/optimized-balanced-paranthesis-solution-in-python-652"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
+  </div>
+
+  <div id="b8" class="containerTab" style="display:none;background:blue">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <a href="https://dev.to/bhatnagaranshika02/quick-guide-to-python-38l6"><h2 style="font-size: 20px;">Read full blog here.</h2></a>
+  </div>
+
+  <div id="b9" class="containerTab" style="display:none;background:red">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <h2 style="font-size: 23px;">Read full blog here.</h2>
+  </div>
+   <br><br><br><br>
+
+  <div class="glow">
+    <a href="https://dev.to/bhatnagaranshika02"> - Visit DEV2 Profile.</a>
+    <br><br>
+    <a href="https://hashnode.com/@VisionaryAnshika"> - Visit Hashnode Profile</a>
+  </div>
+
+  <br><br><br>
+  <!--Blog Section Ends-->
+
+
+  <!-- Start of Footer-->
+    <div class="footer">
+      <div class="upperfooter">
+        <div class="split left">
+          <p style="color: black">
+            <b><marquee>For more information, contact me<br>LinkedIn | Instagram | Facebook | Github</marquee></b>
+          </p>
+        </div>
+        <div class = "split right">
+          <a href="https://www.facebook.com/anshika.bhatnagar.796/" class="fa fa-facebook"> </a>
+          <a href="https://www.linkedin.com/in/anshikabhatnagar/" class="fa fa-linkedin"> </a>
+          <a href="https://www.instagram.com/anshika_rekha_bhatnagar/" class="fa fa-instagram"></a>
+          <a href="https://github.com/bhatnagaranshika02" class="fa fa-github">   </a>
+        </div>
+      </div>
+
+      <div class="lowerfooter">
+        <div>
+          <p>
+            Made with &#10084 by Anshika. All rights reserved. &#9400; 2020
+          </p>
+        </div>
+      </div>
+    </div>
+   
+    <!-- End of Footer -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script>
+  function openTab(tabName) {
+    var i, x;
+    x = document.getElementsByClassName("containerTab");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById(tabName).style.display = "block";
+  }
+  </script>
 
 </body>
-
 
 </html>
